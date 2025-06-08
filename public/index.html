@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iChat 💬</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="title">iChat 💬</h1>
+
+  <div class="main">
+    <div class="name">
+      <input type="text" id="name-input" class="name-input" maxlength="20" placeholder="Enter your name" />
+    </div>
+
+    <ul class="message-container" id="message-container">
+      <!-- Messages will be dynamically inserted here -->
+    </ul>
+
+    <form class="message-form" id="message-form">
+      <input type="text" id="message-input" class="message-input" placeholder="Type your message..." autocomplete="off" />
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">Send ➤</button>
+    </form>
+  </div>
+
+  <h3 class="clients-total" id="clients-total">Total clients: 0</h3>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
