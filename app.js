@@ -21,13 +21,12 @@ io.on('connection', (socket) => {
 
   let userName = 'anonymous';
 
-  // Handle user join
   socket.on('user joined', (name) => {
     userName = name;
     socket.broadcast.emit('user joined', name);
   });
 
-  // Handle incoming chat message
+
   socket.on('chat message', (data) => {
     io.emit('chat message', data);
   });
